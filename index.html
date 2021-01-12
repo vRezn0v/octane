@@ -51,8 +51,8 @@
     </div>
     <script>
         var sel = document.querySelector('body').classList;
-        var theme = localStorage.getItem('theme');
-        if (theme!==null||theme!==undefined) {
+        var theme = localStorage.getItem('octtheme');
+        if (theme!==null) {
             sel.remove('darkmode', 'lightmode');
             sel.add(theme);
         }
@@ -66,8 +66,8 @@
                 sel.remove(classes[1]);
                 sel.add(classes[0]);
             }
-            localStorage.removeItem('theme')
-            localStorage.setItem('theme', sel[0]);
+            localStorage.removeItem('octtheme')
+            localStorage.setItem('octtheme', sel[0]);
         }
     </script>
 </body>
