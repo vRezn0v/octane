@@ -89,6 +89,11 @@ body {
     cursor: pointer;
 }
 
+.whoami .case-item {
+    width: 5rem;
+    height: 5rem;
+}
+
 a.case-item {
     text-decoration: none;
     color: var(--text);
