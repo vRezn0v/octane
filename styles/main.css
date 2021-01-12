@@ -1,0 +1,121 @@
+.lightmode {
+    --bg: #f3f3f3;
+    --text: #5e5e5e;
+    --head-shadow: #9f9f9f;
+    --head-glow: #ffb3b3;
+    --casebg: #e6e6e6;
+    --caseshadow: #afafaf;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s;
+}
+
+.darkmode {
+    --bg: #101010;
+    --text: #f0f0f0;
+    --head-shadow: #9f9f9f;
+    --head-glow: #ff5757;
+    --casebg: #313131;
+    --caseshadow: #212121;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    padding-left: 2%;
+    padding-bottom: 2.5%;
+    user-select: none;
+}
+
+.top-card {
+    width: 96%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.top-card span {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.switchtheme {
+    border: 3px solid var(--text);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 300ms;
+}
+
+.top-card #name {
+    font-weight: 800;
+    font-size: clamp(4rem, -0.8rem + 8vw, 10rem);
+    text-shadow: var(--head-shadow) 3px 3px;
+    transition: all 0.9s ease-in;
+}
+.top-card #name:hover {
+    text-shadow: var(--head-glow) 3px 3px;
+    transition: text-shadow 0.9s ease-in-out;
+}
+.section-header {
+    border-bottom: solid 2px var(--text);
+    width: 96%;
+    padding-bottom: 0.5%;
+    font-weight: 600;
+    font-size: clamp(2rem, -0.8rem + 4.5vw, 5rem);
+}
+.section-case {
+    font-size: clamp(2rem, -0.8rem + 4.5vw, 4rem);
+    width: 96%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.case-item {
+    color: var(--text);
+    background-color: var(--casebg);
+    width: 7em;
+    height: 5em;
+    padding: 2em 1em;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    font-weight: 600;
+    box-shadow: var(--caseshadow) 2.5px 2.5px;
+    animation: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+a.case-item {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.case-item:hover {
+    transform: translate(-2.5px, -2.5px);
+    box-shadow: var(--head-glow) 5px 5px;
+    transition: all 0.2s ease-out;
+}
+
+.whyami .case-item-1 {
+    height: max-content;
+    width: 30em;
+}
+
+.whereami .case-item {
+    height: 5em;
+}
+
+.whereami .case-item span {
+    color: var(--head-shadow);
+    display: none;
+    transition: ease-out 500ms;
+}
+
+.whereami .case-item:hover span {
+    display: block;
+    transition: ease-in 200ms;
+}

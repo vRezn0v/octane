@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octane ~</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="darkmode" oncontextmenu="event.preventDefault()">
+    <div class="top-card">
+        <h1 class="display-1" id="name">RZWSHRE</h1>
+        <span><div class="switchtheme" onclick="toggleTheme(this)"></div></span>
+    </div>
+    <div class="whatami">
+        <h3 class="section-header">What Am I?</h3>
+        <div class="section-case">
+            <div class="case-item">Developer</div>
+            <div class="case-item">Gamer</div>
+            <div class="case-item">Musician</div>
+            <div class="case-item">Human</div>
+            <div class="case-item">Linux Enthusiast</div>
+            <div class="case-item">Space Mage</div>
+        </div>
+    </div>
+    <div class="who">
+        <h3 class="section-header">Who Am I?</h3>
+        <div class="section-case">
+            <div class="case-item">Well Hi There, I'm Octane.</div>
+            <div class="case-item">As if that wasn't obvious~</div>
+            <div class="case-item">I'm a Full Stack Developer</div>
+            <div class="case-item">Along with many other things...</div>
+            <div class="case-item">Be seeing you~</div>
+        </div>
+    </div>
+    <div class="whyami">
+        <h3 class="section-header">Why Am I?</h3>
+        <div class="section-case">
+            <div class="case-item case-item-1">Huh... you caught me off-guard on that one pfft, I guess you'll have to come back later to find out.. or it won't make much sense but the answer is 42~</div>
+            <div class="case-item"></div>
+        </div>
+    </div>
+    <div class="whereami">
+        <h3 class="section-header">Where Am I?</h3>
+        <div class="section-case">
+            <div class="case-item"><span>Rez#7274</span><span>Octane#2220</span>Discord</div>
+            <a class="case-item" href="https://github.com/vrezn0v" target="_blank"><span>vrezn0v</span>Github</a>
+            <a class="case-item" href="https://soundcloud.com/rzwshre" target="_blank"><span>RZWSHRE</span>SoundCloud</a>
+            <a class="case-item" href="https://steamcommunity.com/id/rzwshre_/" target="_blank"><span>RZWSHRE</span>Steam</a>
+        </div>
+    </div>
+    <script>
+        var sel = document.querySelector('body').classList;
+        var theme = localStorage.getItem('theme');
+        if (theme!==null) {
+            sel.remove('darkmode', 'lightmode');
+            sel.add(theme);
+        }
+        function toggleTheme(obj){
+            var classes = ['darkmode','lightmode'];
+            console.log(sel);
+            if (sel.contains(classes[0])){
+                sel.remove(classes[0]);
+                sel.add(classes[1]);
+            } else {
+                sel.remove(classes[1]);
+                sel.add(classes[0]);
+            }
+            localStorage.removeItem('theme')
+            localStorage.setItem('theme', sel[0]);
+        }
+    </script>
+</body>
+</html>
