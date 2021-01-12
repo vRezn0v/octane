@@ -5,7 +5,7 @@
     --head-glow: #ffb3b3;
     --casebg: #e6e6e6;
     --caseshadow: #afafaf;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.7s;
 }
 
 .darkmode {
@@ -15,7 +15,7 @@
     --head-glow: #ff5757;
     --casebg: #313131;
     --caseshadow: #212121;
-    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
 }
 
 body {
@@ -41,8 +41,8 @@ body {
 
 .switchtheme {
     border: 3px solid var(--text);
-    width: 5rem;
-    height: 5rem;
+    width: clamp(1rem,3vw,5rem);
+    height: clamp(1rem,3vw,5rem);
     border-radius: 50%;
     transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 300ms;
 }
@@ -51,11 +51,11 @@ body {
     font-weight: 800;
     font-size: clamp(4rem, -0.8rem + 8vw, 10rem);
     text-shadow: var(--head-shadow) 3px 3px;
-    transition: all 0.9s ease-in;
+    transition: all 0.5s ease-in;
 }
 .top-card #name:hover {
     text-shadow: var(--head-glow) 3px 3px;
-    transition: text-shadow 0.9s ease-in-out;
+    transition: text-shadow 0.4s ease-in-out;
 }
 .section-header {
     border-bottom: solid 2px var(--text);
@@ -73,8 +73,8 @@ body {
 .case-item {
     color: var(--text);
     background-color: var(--casebg);
-    width: 7em;
-    height: 5em;
+    width: clamp(7em, 1vw, 10em);
+    height: clamp(5em, 1vw, 10em);
     padding: 2em 1em;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -101,6 +101,7 @@ a.case-item {
 }
 
 .whyami .case-item-1 {
+    padding-top: 1em;
     height: max-content;
     width: 30em;
 }
