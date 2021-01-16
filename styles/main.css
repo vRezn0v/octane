@@ -22,7 +22,7 @@ body {
     background: var(--bg);
     color: var(--text);
     padding-left: 2%;
-    padding-bottom: 2.5%;
+    padding-bottom: 1%;
     user-select: none;
 }
 
@@ -31,6 +31,12 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg);
+    z-index: 999;
+    border-bottom: 1px solid var(--text);
+    border-radius: 3px;
 }
 
 .top-card span {
@@ -47,6 +53,10 @@ body {
     transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 300ms;
 }
 
+.output {
+    display: none;
+}
+
 .top-card #name {
     font-weight: 800;
     font-size: clamp(4rem, -0.8rem + 8vw, 10rem);
@@ -59,6 +69,7 @@ body {
 }
 .section-header {
     border-bottom: solid 2px var(--text);
+    border-radius: 3px;
     width: 96%;
     padding-bottom: 0.5%;
     font-weight: 600;
@@ -88,8 +99,6 @@ body {
     animation: all 0.3s ease-in;
     cursor: pointer;
 }
-
-
 
 a.case-item {
     text-decoration: none;
@@ -121,4 +130,35 @@ a.case-item {
 .whereami .case-item:hover span {
     display: block;
     transition: ease-in 200ms;
+}
+
+footer {
+    display: block;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+footer span {
+    font-weight: 800;
+    color: var(--head-shadow);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+}
+
+@media (min-width: 760px) {
+    .output {
+        display: block;
+        flex-grow: 1;
+        height: inherit;
+        padding: 30px 100px;
+        font-weight: 800;
+    }
 }

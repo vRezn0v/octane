@@ -10,48 +10,53 @@
 </head>
 <body class="darkmode" oncontextmenu="event.preventDefault()">
     <div class="top-card">
-        <h1 class="display-1" id="name">RZWSHRE</h1>
-        <span><div class="switchtheme" onclick="toggleTheme(this)"></div></span>
+        <h1 class="display-1" id="name"  onmouseover="outputDisplay(this)" desc="Yup, that's me. Yours Truly.">RZWSHRE</h1>
+        <div class="output">Filler Text Goes Here</div>
+        <span><div class="switchtheme" onclick="toggleTheme(this)"  onmouseover="outputDisplay(this)" desc="Click with caution if you are in a dark room, it might act as an flashbang if used carelessly. In case anything happens, I warned ya!"></div></span>
     </div>
     <div class="whatami">
         <h3 class="section-header">What Am I?</h3>
         <div class="section-case">
-            <div class="case-item">Developer</div>
-            <div class="case-item">Gamer</div>
-            <div class="case-item">Musician</div>
-            <div class="case-item">Human</div>
-            <div class="case-item">Linux Enthusiast</div>
-            <div class="case-item">Space Mage</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="Well, First and foremost, I'm a Web Developer, I build clean looking websites and I also do tend to enjoy building stuff that works behind the scenes many things. From Discord Guild Management Bots to complex APIs.">Developer</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="You'd have seen this one from far away, I do love programming but Gaming is where my heart is at. Be it executing titans in Titanfall 2, Shooting and Looting in Borderlands or even faring the Wasteland in Fallouts, you ever need a partner, Come find me on Steam.">Gamer</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="You must be really curious to tap on this button, well, I also do make music, nothing major, but I do love experimenting with sounds. [SoundCloud linked below]">Musician</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="As evident by my addiction to Oxygen, I hereby certify that, I, Rez of the planet called Earth, 100% am a human.">Human</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="Don't we all love shiny cool stuff? Well, me too xD.. While I tend to rely on Windows for Gaming, for my day to day usage, I tend to stick with Linux and its modular design.">Linux Enthusiast</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="[CLASSIFIED INFORMATION]">Space Mage</div>
         </div>
     </div>
     <div class="whoami">
         <h3 class="section-header">Who Am I?</h3>
         <div class="section-case">
-            <div class="case-item">Well Hi There, I'm Octane.</div>
-            <div class="case-item">As if that wasn't obvious~</div>
-            <div class="case-item">I'm a Full Stack Developer</div>
-            <div class="case-item">Along with many other things...</div>
-            <div class="case-item">Be seeing you~</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="Other Aliases May or May Not Include Rez, RZWSHRE and [REDACTED].">Well Hi There, I'm Octane.</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="... come on, that's the truth *cough*">As if that wasn't obvious~</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="Yup! That's Me">I'm a Student</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="The Many Other Things Array Contains: Gamer, Human, Cyberpunk Enthusiast, Minimalist, Artist (maybe a little?).">Along with many other things...</div>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="I mean, why not? Unless..">Be seeing you~</div>
         </div>
     </div>
     <div class="whyami">
         <h3 class="section-header">Why Am I?</h3>
         <div class="section-case">
-            <div class="case-item case-item-1">Huh... you caught me off-guard on that one pfft, I guess you'll have to come back later to find out.. or it won't make much sense but the answer is 42~</div>
+            <div class="case-item case-item-1" onmouseover="outputDisplay(this)" desc="In Today's Episode of 'Why Am I?', Rez wonders about the deeper meaning of life and the purpose of our existence as a species. Check back later for updates...">Huh... you caught me off-guard on that one pfft, I guess you'll have to come back later to find out.. or it won't make much sense but the answer is 42~</div>
         </div>
     </div>
     <div class="whereami">
         <h3 class="section-header">Where Am I?</h3>
         <div class="section-case">
-            <div class="case-item"><span>Rez#7274</span><span>Octane#2220</span>Discord</div>
-            <a class="case-item" href="https://github.com/vrezn0v" target="_blank"><span>vrezn0v</span>Github</a>
-            <a class="case-item" href="https://soundcloud.com/rzwshre" target="_blank"><span>RZWSHRE</span>SoundCloud</a>
-            <a class="case-item" href="https://steamcommunity.com/id/rzwshre_/" target="_blank"><span>RZWSHRE</span>Steam</a>
+            <div class="case-item" onmouseover="outputDisplay(this)" desc="Welp, this is my primary point of contact, I primarily use Rez for communication but Octane exists in case you can't reach me." ><span>Rez#7274</span><span>Octane#2220</span>Discord</div>
+            <a class="case-item" onmouseover="outputDisplay(this)" desc="Ah a curious one you are, well here you go, you can see my creations and whatever I'm working on here, just make sure not to touch anything that looks breakable *cough*." href="https://github.com/vrezn0v" target="_blank"><span>vrezn0v</span>Github</a>
+            <a class="case-item" onmouseover="outputDisplay(this)" desc="Disclaimer: I won't be held responsible for damage to your Auditory Systems, Proceed With Caution..." href="https://soundcloud.com/rzwshre" target="_blank"><span>RZWSHRE</span>SoundCloud</a>
+            <a class="case-item" onmouseover="outputDisplay(this)" desc="A brave one you are, well, fine, hit me up on Steam, I guess there's no harm in tagging along for an adventure." href="https://steamcommunity.com/id/rzwshre_/" target="_blank"><span>RZWSHRE</span>Steam</a>
         </div>
     </div>
+    <footer>
+        <span>Built with Pain.</span>
+    </footer>
     <script>
         var sel = document.querySelector('body').classList;
         var theme = localStorage.getItem('octtheme');
+        var output = document.querySelector('.output');
         if (theme!==null) {
             sel.remove('darkmode', 'lightmode');
             sel.add(theme);
@@ -68,6 +73,9 @@
             }
             localStorage.removeItem('octtheme')
             localStorage.setItem('octtheme', sel[0]);
+        }
+        function outputDisplay(obj) {
+            output.innerHTML = obj.attributes.desc.value;
         }
     </script>
 </body>
